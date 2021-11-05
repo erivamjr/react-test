@@ -6,7 +6,7 @@ import renderwithRouter from '../renderWithRouter';
 // Caminho Feliz!!!
 describe('Teste se o topo da aplicação contém um conjunto fixo de links de navegação.',
   () => {
-    test('Conter os links consecutivos com texto `Home`, About, Favorite Pokémons', () => {
+    test('Conter os links respectivos com texto `Home`, About, Favorite Pokémons', () => {
       renderwithRouter(<App />);
       const homeLink = screen.getByText(/Home/i);
       expect(homeLink).toBeInTheDocument();
