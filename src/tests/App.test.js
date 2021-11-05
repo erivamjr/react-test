@@ -7,7 +7,7 @@ import renderWithRouter from '../renderWithRouter';
 // Caminho Feliz!!!
 describe('Teste se o topo da aplicação contém um conjunto fixo de links de navegação.',
   () => {
-    test('Conter os links respectivos com texto `Home`, About, Favorite Pokémons', () => {
+    test('- Conter os links respectivos com texto `Home`, About, Favorite Pokémons', () => {
       renderWithRouter(<App />);
       const homeLink = screen.getByText(/Home/i);
       expect(homeLink).toBeInTheDocument();
@@ -17,7 +17,7 @@ describe('Teste se o topo da aplicação contém um conjunto fixo de links de na
       expect(favoriteLink).toBeInTheDocument();
     });
 
-    test('Teste de redirecionamento ao clicar no link `Home`.', () => {
+    test('- Teste de redirecionamento ao clicar no link `Home`.', () => {
       const { history } = renderWithRouter(<App />);
 
       const homeLink = screen.getByRole('link', { name: 'Home' });
@@ -28,7 +28,7 @@ describe('Teste se o topo da aplicação contém um conjunto fixo de links de na
       expect(pathname).toBe('/');
     });
 
-    test('Teste de redirecionamento ao clicar no link `About`.', () => {
+    test('- Teste de redirecionamento ao clicar no link `About`.', () => {
       const { history } = renderWithRouter(<App />);
 
       const aboutLink = screen.getByRole('link', { name: 'About' });
@@ -39,7 +39,7 @@ describe('Teste se o topo da aplicação contém um conjunto fixo de links de na
       expect(pathname).toBe('/about');
     });
 
-    test('Teste de redirecionamento ao clicar no link `Favorite`.', () => {
+    test('- Teste de redirecionamento ao clicar no link `Favorite`.', () => {
       const { history } = renderWithRouter(<App />);
 
       const homeLink = screen.getByRole('link', { name: 'Favorite Pokémons' });
@@ -50,7 +50,7 @@ describe('Teste se o topo da aplicação contém um conjunto fixo de links de na
       expect(pathname).toBe('/favorites');
     });
 
-    test('Teste de redirecionamento ao clicar no link `Not Found`.', () => {
+    test('- Teste de redirecionamento ao clicar no link `Not Found`.', () => {
       const { history } = renderWithRouter(<App />);
       // console.log(history);
       history.push('/not-found');
