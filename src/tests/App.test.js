@@ -52,7 +52,7 @@ describe('Teste se o topo da aplicação contém um conjunto fixo de links de na
 
     test('Teste de redirecionamento ao clicar no link `Not Found`.', () => {
       const { history } = renderWithRouter(<App />);
-      console.log(history);
+      // console.log(history);
       history.push('/not-found');
 
       const { pathname } = history.location;
