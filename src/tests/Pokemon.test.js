@@ -25,7 +25,7 @@ informações de determinado pokémon.`, () => {
     expect(image.src).toBe(imageSrc);
   });
 
-  test(`Teste se o card do Pokémon indicado na Pokédex contém um link de navegação 
+  test(`- Teste se o card do Pokémon indicado na Pokédex contém um link de navegação 
   para exibir detalhes deste Pokémon. O link deve possuir a URL "/pokemons/<id>", 
   onde "<id>" é o id do Pokémon exibido;`, () => {
     const { history } = renderWithRouter(<App />);
@@ -52,7 +52,8 @@ informações de determinado pokémon.`, () => {
     expect(history.location.pathname).toBe('/pokemons/10');
   });
 
-  test('Testa se existe um icone de estrela para favoritar pokemons.', () => {
+  test(`- Teste se o usuário pode favoritar um pokémon através 
+  da página de detalhes.`, () => {
     renderWithRouter(<App />);
 
     const pokeDetails = screen.getByRole('link', { name: 'More details' });
